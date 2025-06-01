@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+</head>
+<body class="body">
+    <h1>Hunt'n'gather</h1>
+    <div class="container3">
+        <div class="week8hunt">
+            <img src="images/week8hunt1.png" alt="week8hunt1">
+            <p>Spectral Subjects is a new interactive artwork commissioned for MOCA's atrium. The piece is a thermal observatory—a constantly updating map of the room's temperature, projected in the round. Using state of the art thermographic cameras, the project detects and displays heat and cold in the environment, including the building's ventilation, visitors' body heat, and inanimate objects. As with previous biometric art projects by Lozano-Hemmer, the piece is a call to think of the human body as a continuum with the environment around us.</p>
+        </div>
+        <div class="week8hunt">
+            <img src="images/week8hunt2.png" alt="week8hunt2">
+            <p>OBRA SONORA—Sound Work in Spanish—comprises 15 artworks that engage and experiment with sound as their primary medium. Together, these pieces intone various histories and traditions of auditory experience and sonic practices, ranging from multi-channel audio environments with thousands of speakers to embodied architectures for collective listening, from sound-objects to endoscopic explorations of the very anatomy of vocal expression.</p>
+        </div>
+        <div class="week8hunt">
+            <img src="images/week8hunt3.png" alt="week8hunt3">
+            <p>The Parrish Art Museum will present Collider, a new public artwork, as part of the annual façade installation series. Made up of hundreds of small LED spotlights that create a calm, rippling curtain of light along the Museum's south wall, Collider will be visible from Montauk Highway and up close from the Museum's meadow. The lights react in real-time to invisible cosmic radiation from outer space, originating from stars and black holes, detected by a custom-made muon detector installed at the Museum.</p>
+        </div>
+    </div>
+    <div>
+        <button onclick="window.location.href='index.html'" class="homepage-button">
+            Homepage
+        </button>
+    </div>
+    <div>
+        <button onclick="window.location.href='week8index.html'" class="back-button">
+            Back
+        </button>
+    </div>
+    <script>
+        let bgmStarted = false;
+        addEventListener("click", function(event){
+            const sound = new Audio("sound/gunsound.mp3");
+            sound.play();
+            // Added shooting sound effects 
+            if (bgmStarted == false) {
+                const bgm = new Audio("sound/bgm.mp3");
+                bgm.play();
+                bgm.volume = 0.4;
+                bgmStarted = true;
+            }
+            // Add background music (get idea from google)
+        document.body.style.cursor = "url('images/cursorFire.png'), auto";
+        setTimeout(() => {
+        document.body.style.cursor = "url('images/cursor.png'), auto";
+        }, 300)
+        })
+    </script>
+</body>
+</html>

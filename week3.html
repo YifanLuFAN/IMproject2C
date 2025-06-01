@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+</head>
+<body class="body">
+    <h1>Week3</h1>
+    <div class="container2">
+        <div class="leftContainer">
+            <img src="images/week3image1.jpg" alt="week3mage1" class="week3image1">
+            <h2>PAPER PROTOTYPING</h2>
+            <p>My prototype design for the workbook. The player's mouse will become a shooting sight, and the twelve-week workbook will become twelve targets for the user to shoot.</p>
+        </div>
+        <div class="rightContainer">
+            <img src="images/week3image2.jpg" alt="week3image2" class="week3image2">
+            <h2>FLUID DESIGN</h2>
+            <p>For mobile, I redesigned the layout of the website. (for Application)</p>
+        </div>
+    </div>
+    <div>
+        <button onclick="window.location.href='index.html'" class="homepage-button">
+            Homepage
+        </button>
+    </div>
+    <script>
+        let bgmStarted = false;
+        addEventListener("click", function(event){
+            const sound = new Audio("sound/gunsound.mp3");
+            sound.play();
+            // Added shooting sound effects 
+            if (bgmStarted == false) {
+                const bgm = new Audio("sound/bgm.mp3");
+                bgm.play();
+                bgm.volume = 0.4;
+                bgmStarted = true;
+            }
+            // Add background music (get idea from google)
+        document.body.style.cursor = "url('images/cursorFire.png'), auto";
+        setTimeout(() => {
+        document.body.style.cursor = "url('images/cursor.png'), auto";
+        }, 300)
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+</head>
+<body class="body">
+    <h1>Hunt'n'gather</h1>
+    <div class="container3">
+        <div class="week6hunt">
+            <img src="images/week6hunt1.png" alt="week5hunt1">
+            <p>Prolific and visual way to imagine the massive and complex timeline of recorded human civilization. Joseph Priestly is well known for two timeline charts. The first is the Chart of Biography, which provided a 700-year timeline of famous men, leaders, and philosophers, and drew focus to which men were active in history at the same time. The Chart of Biography, as simple as it is, remains one of history's most important visualizations.</p>
+        </div>
+        <div class="week6hunt">
+            <img src="images/week6hunt2.png" alt="week5hunt2">
+            <p>All governments, and particularly the USA, have notoriously obscure and tough to understand government budgets. This treemap, created by The White House during Barack Obama's presidency, visually broke down the United State's 2016 budget to put government programs in context. It's unclear if this was the first-ever interactive budget publicly published by the US government, but it remains archived and illuminating—even if it is a fairly basic treemap chart.</p>
+        </div>
+        <div class="week6hunt">
+            <img src="images/week6hunt3.png" alt="week5hunt3">
+            <p>Don't pass over this one just because it analyzes selfies instead of cholera prevention. Selfiecity presents a wide view of selfie data in the context of a transnational phenomenon. 120,000 selfies from around the world are analyzed to study how people take selfies. What's incredible here is just how comprehensive the study is and how seriously it slices and dices every aspect of selfies. We can find trends in everything from head tilt or pose trends by city to smile frequency by age group and gender.</p>
+        </div>
+    </div>
+    <div>
+        <button onclick="window.location.href='index.html'" class="homepage-button">
+            Homepage
+        </button>
+    </div>
+    <div>
+        <button onclick="window.location.href='week6index.html'" class="back-button">
+            Back
+        </button>
+    </div>
+    <script>
+        let bgmStarted = false;
+        addEventListener("click", function(event){
+            const sound = new Audio("sound/gunsound.mp3");
+            sound.play();
+            // Added shooting sound effects 
+            if (bgmStarted == false) {
+                const bgm = new Audio("sound/bgm.mp3");
+                bgm.play();
+                bgm.volume = 0.4;
+                bgmStarted = true;
+            }
+            // Add background music (get idea from google)
+        document.body.style.cursor = "url('images/cursorFire.png'), auto";
+        setTimeout(() => {
+        document.body.style.cursor = "url('images/cursor.png'), auto";
+        }, 300)
+        })
+    </script>
+</body>
+</html>

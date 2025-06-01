@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+</head>
+<body class="body">
+    <h1>Inspiration</h1>
+    <div class="container3">
+        <div class="week9inspire">
+            <img src="images/week9inspire.png" alt="week9inspire">
+            <div>
+            <h2>WALL-E</h2>
+            <p>PET WALL-E involves 2 mechanisms. One is the gear train powered by a DC motor, and the second is the connection of the arms to the gear where its movement is restricted by two holes on the side of the pet. Together this produces our desired up and down motion of the arms. Our pet also involves one LED in each eye where upon activation via the sensor, they blink alternatively (one red and one blue). If you rub its back and let it know that "it's a good boy", thus covering the light sensor and passing our set threshold of 60% light, the mechanisms and electronics will activate for seven iterations of the eye blinking function. The DC motor will continue to power the mechanism during this period.
+            </p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <button onclick="window.location.href='index.html'" class="homepage-button">
+            Homepage
+        </button>
+    </div>
+    <div>
+        <button onclick="window.location.href='week9index.html'" class="back-button">
+            Back
+        </button>
+    </div>
+    <script>
+        let bgmStarted = false;
+        addEventListener("click", function(event){
+            const sound = new Audio("sound/gunsound.mp3");
+            sound.play();
+            // Added shooting sound effects 
+            if (bgmStarted == false) {
+                const bgm = new Audio("sound/bgm.mp3");
+                bgm.play();
+                bgm.volume = 0.4;
+                bgmStarted = true;
+            }
+            // Add background music (get idea from google)
+        document.body.style.cursor = "url('images/cursorFire.png'), auto";
+        setTimeout(() => {
+        document.body.style.cursor = "url('images/cursor.png'), auto";
+        }, 300)
+        })
+    </script>
+</body>
+</html>

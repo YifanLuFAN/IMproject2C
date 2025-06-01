@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+</head>
+<body class="body">
+    <h1>In-class coding</h1>
+    <div class="container3">
+        <div class="In-class">
+            <p>1.Create a canvas, change the background color, and generate two circles of different sizes at two locations.</p>
+            <a href="week4work1/index.html">See the webpage</a>
+        </div>
+        <div class="In-class">
+            <p>2.Every time the user refreshes the page, graphics of different shapes, sizes, and colors are generated at random locations.</p>
+            <a href="week4work2/index.html">See the webpage</a>
+        </div>
+        <div class="In-class">
+            <p>3.How to import images into the database and reference them in the code.</p>
+            <a href="week4work3/index.html">See the webpage</a>
+        </div>
+    </div>
+    <div>
+        <button onclick="window.location.href='index.html'" class="homepage-button">
+            Homepage
+        </button>
+    </div>
+    <div>
+        <button onclick="window.location.href='week4index.html'" class="back-button">
+            Back
+        </button>
+    </div>
+    <script>
+        let bgmStarted = false;
+        addEventListener("click", function(event){
+            const sound = new Audio("sound/gunsound.mp3");
+            sound.play();
+            // Added shooting sound effects 
+            if (bgmStarted == false) {
+                const bgm = new Audio("sound/bgm.mp3");
+                bgm.play();
+                bgm.volume = 0.4;
+                bgmStarted = true;
+            }
+            // Add background music (get idea from google)
+        document.body.style.cursor = "url('images/cursorFire.png'), auto";
+        setTimeout(() => {
+        document.body.style.cursor = "url('images/cursor.png'), auto";
+        }, 300)
+        })
+    </script>
+</body>
+</html>

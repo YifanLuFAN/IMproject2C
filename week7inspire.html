@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+</head>
+<body class="body">
+    <h1>Inspiration</h1>
+    <div class="container3">
+        <div class="week7inspire">
+            <img src="images/week7inspire.png" alt="week7inspire">
+            <div>
+            <h2>GODZILLA</h2>
+            <p>Godzilla was an exercise in using the right technology to showcase its capabilities - in this case SLA 3D Printing. SLA is one of the most widely used vat photopoly-merisaion technologies. It is used to create objects by selectively curing a polymer resin, layer by layer, using an ultraviolet (UV) laser beam. The materials used in SLA are photosensitive thermoset polymers that come in a liquid form. 
+                <br>
+                A key feature of this technology is its ability to capture a high level of detial which is otherwise lost in other forms of 3D printing. The model was sculpted digitally applying all the details and ensuring the interior remained hollow to accommodate light, reduce weight and most importantly save on cost. Once the individual pieces were printed, it was a matter of cleaning and assembly, with final painting to complete the finished product.
+            </p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <button onclick="window.location.href='index.html'" class="homepage-button">
+            Homepage
+        </button>
+    </div>
+    <div>
+        <button onclick="window.location.href='week7index.html'" class="back-button">
+            Back
+        </button>
+    </div>
+    <script>
+        let bgmStarted = false;
+        addEventListener("click", function(event){
+            const sound = new Audio("sound/gunsound.mp3");
+            sound.play();
+            // Added shooting sound effects 
+            if (bgmStarted == false) {
+                const bgm = new Audio("sound/bgm.mp3");
+                bgm.play();
+                bgm.volume = 0.4;
+                bgmStarted = true;
+            }
+            // Add background music (get idea from google)
+        document.body.style.cursor = "url('images/cursorFire.png'), auto";
+        setTimeout(() => {
+        document.body.style.cursor = "url('images/cursor.png'), auto";
+        }, 300)
+        })
+    </script>
+</body>
+</html>

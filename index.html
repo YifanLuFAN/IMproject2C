@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+</head>
+<body class="body">
+    <div class="container1">
+        <h1>Shooting!!</h1>
+        <div class="target1" onclick="rewardClick1()"><img src="images/target.png" alt="target1"></div>
+        <div class="target2" onclick="rewardClick2()"><img src="images/target.png" alt="target2"></div>
+        <div class="target3" onclick="rewardClick3()"><img src="images/target.png" alt="target3"></div>
+        <div class="target4" onclick="rewardClick4()"><img src="images/target.png" alt="target4"></div>
+        <div class="target5" onclick="rewardClick5()"><img src="images/target.png" alt="target5"></div>
+        <div class="target6" onclick="rewardClick6()"><img src="images/target.png" alt="target6"></div>
+        <div class="target7" onclick="rewardClick7()"><img src="images/target.png" alt="target7"></div>
+        <div class="target8" onclick="rewardClick8()"><img src="images/target.png" alt="target8"></div>
+        <div class="target9" onclick="rewardClick9()"><img src="images/target.png" alt="target9"></div>
+        <div class="target10" onclick="rewardClick10()"><img src="images/targetoff.png" alt="target10"></div>
+        <div class="target11" onclick="rewardClick11()"><img src="images/targetoff.png" alt="target11"></div>
+        <div class="target12" onclick="rewardClick12()"><img src="images/targetoff.png" alt="target12"></div>
+        <!-- Added 12 targets -->
+        <div id="goalText">Target!!!</div>
+        <!-- Add GOAL text after hitting the target -->
+        <audio src="sound/rewardsound.MP3" id="rewardsound"></audio>
+        <!-- Added sound effects after hitting the target -->
+    </div>
+    <script>
+            let bgmStarted = false;
+        addEventListener("click", function(event){
+            const sound = new Audio("sound/gunsound.mp3");
+            sound.play();
+            // Added shooting sound effects 
+            if (bgmStarted == false) {
+                const bgm = new Audio("sound/bgm.mp3");
+                bgm.play();
+                bgm.volume = 0.4;
+                bgmStarted = true;
+            }
+            // Add background music (get idea from google)
+        document.body.style.cursor = "url('images/cursorFire.png'), auto";
+        setTimeout(() => {
+        document.body.style.cursor = "url('images/cursor.png'), auto";
+        }, 300)
+        })
+        // Change mouse style after shooting (get idea from chatGPT)
+
+        function rewardClick1(){
+            document.getElementById("goalText").style.display = "block";
+            document.getElementById("rewardsound").play();
+            setTimeout(() => {
+                window.location.href="week1.html";
+                document.getElementById("goalText").style.display = "none";
+            }, 3000)
+        }
+        // After shooting, a special sound effect is triggered and the page jumps (the first three targets) (get idea from chatGPT)
+        function rewardClick2(){
+            document.getElementById("goalText").style.display = "block";
+            document.getElementById("rewardsound").play();
+            setTimeout(() => {
+                window.location.href="week2.html";
+                document.getElementById("goalText").style.display = "none";
+            }, 3000)
+        }
+        function rewardClick3(){
+            document.getElementById("goalText").style.display = "block";
+            document.getElementById("rewardsound").play();
+            setTimeout(() => {
+                window.location.href="week3.html";
+                document.getElementById("goalText").style.display = "none";
+            }, 3000)
+        }
+        function rewardClick4(){
+            document.getElementById("goalText").style.display = "block";
+            document.getElementById("rewardsound").play();
+            setTimeout(() => {
+                window.location.href="week4index.html";
+                document.getElementById("goalText").style.display = "none";
+            }, 3000)
+        }
+        // After shooting, only special sound effects are triggered, and the page will not jump.
+        function rewardClick5(){
+            document.getElementById("goalText").style.display = "block";
+            document.getElementById("rewardsound").play();
+            setTimeout(() => {
+                window.location.href="week5index.html";
+                document.getElementById("goalText").style.display = "none";
+            }, 3000)
+        }
+        function rewardClick6(){
+            document.getElementById("goalText").style.display = "block";
+            document.getElementById("rewardsound").play();
+            setTimeout(() => {
+                window.location.href="week6index.html";
+                document.getElementById("goalText").style.display = "none";
+            }, 3000)
+        }
+        function rewardClick7(){
+            document.getElementById("goalText").style.display = "block";
+            document.getElementById("rewardsound").play();
+            setTimeout(() => {
+                window.location.href="week7index.html";
+                document.getElementById("goalText").style.display = "none";
+            }, 3000)
+        }
+        function rewardClick8(){
+            document.getElementById("goalText").style.display = "block";
+            document.getElementById("rewardsound").play();
+            setTimeout(() => {
+                window.location.href="week8index.html";
+                document.getElementById("goalText").style.display = "none";
+            }, 3000)
+        }
+        function rewardClick9(){
+            document.getElementById("goalText").style.display = "block";
+            document.getElementById("rewardsound").play();
+            setTimeout(() => {
+                window.location.href="week9index.html";
+                document.getElementById("goalText").style.display = "none";
+            }, 3000)
+        }
+        function rewardClick10(){
+            document.getElementById("goalText").style.display = "block";
+            document.getElementById("rewardsound").play();
+            setTimeout(() => {
+                document.getElementById("goalText").style.display = "none";
+            }, 3000)
+        }
+        function rewardClick11(){
+            document.getElementById("goalText").style.display = "block";
+            document.getElementById("rewardsound").play();
+            setTimeout(() => {
+                document.getElementById("goalText").style.display = "none";
+            }, 3000)
+        }
+        function rewardClick12(){
+            document.getElementById("goalText").style.display = "block";
+            document.getElementById("rewardsound").play();
+            setTimeout(() => {
+                document.getElementById("goalText").style.display = "none";
+            }, 3000)
+        }
+    </script>
+</body>
+</html>

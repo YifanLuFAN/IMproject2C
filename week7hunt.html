@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+</head>
+<body class="body">
+    <h1>Hunt'n'gather</h1>
+    <div class="container3">
+        <div class="week7hunt">
+            <img src="images/week7hunt1.png" alt="week7hunt1">
+            <p>This project was developed during the Physical Computing and Creative Coding Course at the School of Form in Poznań, Poland. The assignment was to focus on building a project that is based off "the aesthetics of interaction" keywords. The lecturers for the course were Wiesław Bartkowski and Krzysztof Goliński. The project goal was to rethink about typical button-like interface of audio sequencer and design unique tangible interface for it. This project uses a CNC Router to cut out the wooden base and a bench drill press. Then sensors were placed in each hole and connected to the arduino device (32 sensors in all).</p>
+        </div>
+        <div class="week7hunt">
+            <img src="images/week7hunt2.png" alt="week7hunt2">
+            <p>This project is great for Halloween season, if you want to surprise kids with a new and innovative way to get their candy from trick-or-treating. It uses an Arduino Leonardo mircocontroller, stepper motor, various pvc pipes cut to size, led lights (for show), wood for the base structure, two Adafruit motor shields, and an Adafruit proto shield. A second arduino was used for the LED light show. The overall material cost was under $450 and it took about a month from idea to "finished" product. This project intersects mechanical electrical, and software systems as well as design. This project was created by Scott N. Miller (and his kids). Scott is the CEO and Co-Founder of Dragon Innovation. He has worked on various robotic projects many years with well established companies like Disney Immagineering, Hasbro, and iRobot. He has also helped build a robotic tuna fish at MIT, for which he recieved his Masters Degree.</p>
+        </div>
+        <div class="week7hunt">
+            <img src="images/week7hunt3.png" alt="week7hunt3">
+            <p>Becky Stern is the director of Wearable Electronics at Adafruit in New York City.She blogs about interesting arduino/microcontroller wearable projects. These project vary from runway-ready light up dresses to Bluetooth talking dog collars. Many of these projects she blogs about use a Lilypad Arduino which is specially designed to easily be sew into fabric elements of projects. It is sewn to fabric and similarly mounted power supplies, sensors and actuators with conductive thread. </p>
+        </div>
+    </div>
+    <div>
+        <button onclick="window.location.href='index.html'" class="homepage-button">
+            Homepage
+        </button>
+    </div>
+    <div>
+        <button onclick="window.location.href='week7index.html'" class="back-button">
+            Back
+        </button>
+    </div>
+    <script>
+        let bgmStarted = false;
+        addEventListener("click", function(event){
+            const sound = new Audio("sound/gunsound.mp3");
+            sound.play();
+            // Added shooting sound effects 
+            if (bgmStarted == false) {
+                const bgm = new Audio("sound/bgm.mp3");
+                bgm.play();
+                bgm.volume = 0.4;
+                bgmStarted = true;
+            }
+            // Add background music (get idea from google)
+        document.body.style.cursor = "url('images/cursorFire.png'), auto";
+        setTimeout(() => {
+        document.body.style.cursor = "url('images/cursor.png'), auto";
+        }, 300)
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+</head>
+<body class="body">
+    <h1>Creative coding6</h1>
+    <div class="container3">
+        <div class="creative">
+            <img src="images/creative6.png" alt="week6creativecoding3">
+            <p>When it comes to sound changes, we can't help but think of "audio visualization". This is exactly the data visualization mentioned in this week's hunt'n'gather. I prefer bar-shaped audio visualizations to line-shaped ones.
+                <br>
+                The song I chose is called "Bow And Arrow", which is a work by Japanese singer Kenshi Yonezu. This song describes the relationship between athletes and coaches that trust and achieve each other.
+                <br>
+                How could I miss the opportunity to share my favorite music with you? Please ENJOY!
+                <br>
+                (Idea got from openprocessing)</p>
+            <a href="week6-3/index.html">See the website</a>
+        </div>
+    </div>
+    <div>
+        <button onclick="window.location.href='index.html'" class="homepage-button">
+            Homepage
+        </button>
+    </div>
+    <div>
+        <button onclick="window.location.href='week6index.html'" class="back-button">
+            Back
+        </button>
+    </div>
+    <script>
+        let bgmStarted = false;
+        addEventListener("click", function(event){
+            const sound = new Audio("sound/gunsound.mp3");
+            sound.play();
+            // Added shooting sound effects 
+            if (bgmStarted == false) {
+                const bgm = new Audio("sound/bgm.mp3");
+                bgm.play();
+                bgm.volume = 0.4;
+                bgmStarted = true;
+            }
+            // Add background music (get idea from google)
+        document.body.style.cursor = "url('images/cursorFire.png'), auto";
+        setTimeout(() => {
+        document.body.style.cursor = "url('images/cursor.png'), auto";
+        }, 300)
+        })
+    </script>
+</body>
+</html>

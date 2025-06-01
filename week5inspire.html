@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+</head>
+<body class="body">
+    <h1>This week's inspiration</h1>
+    <div class="container3">
+        <div class="inspire">
+            <img src="images/week5inspiration1.jpg" alt="week5inspiration1">
+            <p>This week we need to draw a Kusama sketch, and my work is based on Kusama's "Phosphoresce in the Daytime". This work retains Kusama's usual painting habits - filling the picture with dots, but the difference is that we can see three larger circular blocks of color (blue, yellow, and red) in the middle of the picture. This idea inspired me. I also learned to use circular blocks of color to draw like Kusama, but I have more blocks of color and the colors I choose are closer.</p>
+        </div>
+        <div class="inspire">
+            <img src="images/week5inspiration2.png" alt="week5inspiration2">
+            <div class="textblock">
+            <p>This week I also found an interesting website! There is nothing on the webpage at first. When the user clicks somewhere, a "point" is created. This point will emit curves in all directions. When the emitted curve reaches a certain length, a new "point" will be generated, and the newly generated points will repeat the process. I think this is simulating cell division. This idea of "click to create - creation continues to create" has inspired me very well.</p>
+            <a href="https://openprocessing.org/sketch/2605243">See the website</a>
+            </div>
+        </div>
+    </div>
+    <div>
+        <button onclick="window.location.href='index.html'" class="homepage-button">
+            Homepage
+        </button>
+    </div>
+    <div>
+        <button onclick="window.location.href='week5index.html'" class="back-button">
+            Back
+        </button>
+    </div>
+    <script>
+        let bgmStarted = false;
+        addEventListener("click", function(event){
+            const sound = new Audio("sound/gunsound.mp3");
+            sound.play();
+            // Added shooting sound effects 
+            if (bgmStarted == false) {
+                const bgm = new Audio("sound/bgm.mp3");
+                bgm.play();
+                bgm.volume = 0.4;
+                bgmStarted = true;
+            }
+            // Add background music (get idea from google)
+        document.body.style.cursor = "url('images/cursorFire.png'), auto";
+        setTimeout(() => {
+        document.body.style.cursor = "url('images/cursor.png'), auto";
+        }, 300)
+        })
+    </script>
+</body>
+</html>

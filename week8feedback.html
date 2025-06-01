@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+</head>
+<body class="body">
+    <h1>Feedback for 2B</h1>
+    <div class="container3">
+        <div class="week8feedback">
+            <p>1.There is no problem with the overall structure of the website, but the layout still needs to be improved (such as font size, color, the ratio of pictures and text, the width of the page occupied by text, etc.). I will make the website page look more beautiful and tidy while maintaining the original clear structure.</p>
+            <p>2.Responsive Design. In addition to designing a PC layout for the website, I also need to design a mobile layout for the website (width less than 768px).</p>
+            <p>3.I have no experience in physical computing, so I may produce very few physical models, but I can spend more time collecting inspiration. There are many interesting existing models that are worth learning from.</p>
+        </div>
+
+    </div>
+    <div>
+        <button onclick="window.location.href='index.html'" class="homepage-button">
+            Homepage
+        </button>
+    </div>
+    <div>
+        <button onclick="window.location.href='week8index.html'" class="back-button">
+            Back
+        </button>
+    </div>
+    <script>
+        let bgmStarted = false;
+        addEventListener("click", function(event){
+            const sound = new Audio("sound/gunsound.mp3");
+            sound.play();
+            // Added shooting sound effects 
+            if (bgmStarted == false) {
+                const bgm = new Audio("sound/bgm.mp3");
+                bgm.play();
+                bgm.volume = 0.4;
+                bgmStarted = true;
+            }
+            // Add background music (get idea from google)
+        document.body.style.cursor = "url('images/cursorFire.png'), auto";
+        setTimeout(() => {
+        document.body.style.cursor = "url('images/cursor.png'), auto";
+        }, 300)
+        })
+    </script>
+</body>
+</html>

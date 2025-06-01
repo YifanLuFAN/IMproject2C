@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+</head>
+<body class="body">
+    <h1>Week1</h1>
+    <div class="container2">
+        <div class="leftContainer"> <!-- Divide the page into two parts, left and right -->
+            <img src="images/week1image1.jpg" alt="week1image1" class="week1image1">
+            <h2>HUMAN COMPUTER IN YOUR FACE!</h2>
+            <p>Our team has designed a pair of external operating gloves for FPS games. After players put on the gloves, they can use actions such as clenching their fists, shaking the gloves back and forth, and bending their index fingers to perform operations such as throwing grenades, shooting, and changing bullets.</p>
+        </div>
+        <!-- Add images, subtitles, and text -->
+        <div class="rightContainer">
+            <img src="images/week1image2.jpg" alt="week1image3" class="week1image2">
+            <h2>TAG!</h2>
+            <p>We selected the Youtube homepage as the object and built a simple html model for it.</p>
+        </div>
+    </div>
+    <div>
+        <button onclick="window.location.href='index.html'" class="homepage-button">
+            Homepage
+        </button>
+    </div>
+    <script>
+        let bgmStarted = false;
+        addEventListener("click", function(event){
+            const sound = new Audio("sound/gunsound.mp3");
+            sound.play();
+            // Added shooting sound effects 
+            if (bgmStarted == false) {
+                const bgm = new Audio("sound/bgm.mp3");
+                bgm.play();
+                bgm.volume = 0.4;
+                bgmStarted = true;
+            }
+            // Add background music (get idea from google)
+        document.body.style.cursor = "url('images/cursorFire.png'), auto";
+        setTimeout(() => {
+        document.body.style.cursor = "url('images/cursor.png'), auto";
+        }, 300)
+        })
+    </script>
+</body>
+</html>

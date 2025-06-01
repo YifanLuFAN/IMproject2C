@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+</head>
+<body class="body">
+    <h1>Creative coding2</h1>
+    <div class="container3">
+        <div class="creative">
+            <img src="images/creative2.png" alt="week5creativecoding1">
+            <p>This week we learned about text deformation (turning text into dots), and I also wanted to try to create something innovative with text.
+                <br>
+                I didn't make any complex changes to the text style, but I had a new idea about the movement of the text. I made the text move in a "roller-like" way, and the text was of course my name. This 3D change makes the picture look very three-dimensional. For the color, the system randomly generates it in a selected range.
+                <br>
+                The speed and rotation radius of the text movement can be freely adjusted, and the text content can also be freely selected, which is very interesting.
+                <br>
+                (Idea got from openprocessing)</p>
+            <a href="week5-1/index.html">See the website</a>
+        </div>
+    </div>
+    <div>
+        <button onclick="window.location.href='index.html'" class="homepage-button">
+            Homepage
+        </button>
+    </div>
+    <div>
+        <button onclick="window.location.href='week5index.html'" class="back-button">
+            Back
+        </button>
+    </div>
+    <script>
+        let bgmStarted = false;
+        addEventListener("click", function(event){
+            const sound = new Audio("sound/gunsound.mp3");
+            sound.play();
+            // Added shooting sound effects 
+            if (bgmStarted == false) {
+                const bgm = new Audio("sound/bgm.mp3");
+                bgm.play();
+                bgm.volume = 0.4;
+                bgmStarted = true;
+            }
+            // Add background music (get idea from google)
+        document.body.style.cursor = "url('images/cursorFire.png'), auto";
+        setTimeout(() => {
+        document.body.style.cursor = "url('images/cursor.png'), auto";
+        }, 300)
+        })
+    </script>
+</body>
+</html>

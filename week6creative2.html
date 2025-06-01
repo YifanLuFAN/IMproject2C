@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+</head>
+<body class="body">
+    <h1>Creative coding5</h1>
+    <div class="container3">
+        <div class="creative">
+            <img src="images/creative5.png" alt="week6creativecoding2">
+            <p>User input, I think this is the place that best reflects the interactive design of a website. We learned about mouse input and sound input this week.
+                <br>
+                Regarding the sound input, I got inspiration from openprocessing. When the user's voice becomes louder, the images that were originally overlapped will separate, creating a sense of movement. This is very suitable as feedback for the user's sound input. The image processing is done by the mask function in Photoshop.
+                <br>
+                Put a photo of yourself, and then split it and leave an afterimage, which is so cool.
+                <br>
+                (Idea got from openprocessing)</p>
+            <a href="week6-2/index.html">See the website</a>
+        </div>
+    </div>
+    <div>
+        <button onclick="window.location.href='index.html'" class="homepage-button">
+            Homepage
+        </button>
+    </div>
+    <div>
+        <button onclick="window.location.href='week6index.html'" class="back-button">
+            Back
+        </button>
+    </div>
+    <script>
+        let bgmStarted = false;
+        addEventListener("click", function(event){
+            const sound = new Audio("sound/gunsound.mp3");
+            sound.play();
+            // Added shooting sound effects 
+            if (bgmStarted == false) {
+                const bgm = new Audio("sound/bgm.mp3");
+                bgm.play();
+                bgm.volume = 0.4;
+                bgmStarted = true;
+            }
+            // Add background music (get idea from google)
+        document.body.style.cursor = "url('images/cursorFire.png'), auto";
+        setTimeout(() => {
+        document.body.style.cursor = "url('images/cursor.png'), auto";
+        }, 300)
+        })
+    </script>
+</body>
+</html>

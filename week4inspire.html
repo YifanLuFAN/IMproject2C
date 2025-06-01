@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+</head>
+<body class="body">
+    <h1>This week's inspiration</h1>
+    <div class="container3">
+        <div class="inspire">
+            <img src="images/week4inspiration1.png" alt="week4inspiration1">
+            <p>I found a website called openprocessing! There are websites made by people from all over the world using processing, and some of them also provide source code for me to learn from. This is really useful for me!</p>
+        </div>
+        <div class="inspire">
+            <img src="images/week4inspiration2.png" alt="week4inspiration2">
+            <div class="textblock">
+            <p>We learned in class this week how to create circles, change background colors, etc. in Processing. Based on this, I found a very interesting website in OpenProcessing. On a black background, there are 25 circles of different colors evenly distributed (the colors will be different every time you open the website). When the user's mouse moves between two circles, they will be connected by another circle, and the color of the connected circle depends on the two connected circles. Users can connect up to four circles at the same time. This is a great idea and an extension of the exercises we have done in class.</p>
+            <a href="https://openprocessing.org/sketch/2588143">See the website</a>
+            </div>
+        </div>
+    </div>
+    <div>
+        <button onclick="window.location.href='index.html'" class="homepage-button">
+            Homepage
+        </button>
+    </div>
+    <div>
+        <button onclick="window.location.href='week4index.html'" class="back-button">
+            Back
+        </button>
+    </div>
+    <script>
+        let bgmStarted = false;
+        addEventListener("click", function(event){
+            const sound = new Audio("sound/gunsound.mp3");
+            sound.play();
+            // Added shooting sound effects 
+            if (bgmStarted == false) {
+                const bgm = new Audio("sound/bgm.mp3");
+                bgm.play();
+                bgm.volume = 0.4;
+                bgmStarted = true;
+            }
+            // Add background music (get idea from google)
+        document.body.style.cursor = "url('images/cursorFire.png'), auto";
+        setTimeout(() => {
+        document.body.style.cursor = "url('images/cursor.png'), auto";
+        }, 300)
+        })
+    </script>
+</body>
+</html>

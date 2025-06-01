@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+</head>
+<body class="body">
+    <h1>Week2</h1>
+    <div class="container2">
+        <div class="leftContainer">
+            <img src="images/week2image1.jpg" alt="week12mage1" class="week2image1">
+            <h2>CRAZY EIGHTS!</h2>
+            <p>We sketched out workbook website design at a rate of one sketch per minute. Among them, I chose the design with gun and shooting as my final result.</p>
+        </div>
+        <div class="rightContainer">
+            <img src="images/week2image2.png" alt="week2image2" class="week2image2">
+            <h2>HELLO WORLD!</h2>
+            <p>Under Matilda's guidance, I tried to build the basic website of the workbook using HTML and CSS on my own.</p>
+        </div>
+    </div>
+    <div>
+        <button onclick="window.location.href='index.html'" class="homepage-button">
+            Homepage
+        </button>
+    </div>
+    <script>
+        let bgmStarted = false;
+        addEventListener("click", function(event){
+            const sound = new Audio("sound/gunsound.mp3");
+            sound.play();
+            // Added shooting sound effects 
+            if (bgmStarted == false) {
+                const bgm = new Audio("sound/bgm.mp3");
+                bgm.play();
+                bgm.volume = 0.4;
+                bgmStarted = true;
+            }
+            // Add background music (get idea from google)
+        document.body.style.cursor = "url('images/cursorFire.png'), auto";
+        setTimeout(() => {
+        document.body.style.cursor = "url('images/cursor.png'), auto";
+        }, 300)
+        })
+    </script>
+</body>
+</html>

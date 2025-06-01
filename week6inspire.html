@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+</head>
+<body class="body">
+    <h1>This week's inspiration</h1>
+    <div class="container3">
+        <div class="inspire">
+            <img src="images/week6inspiration1.png" alt="week6inspiration1">
+            <div class="textblock">
+            <p>This week we learned to use Processing to capture user input (especially mouse and sound), so I found two related websites. The first one is a simple loudness graph. When the user speaks, the three lines on the screen will vibrate with different amplitudes according to the volume of the sound.</p>
+            <a href="https://openprocessing.org/sketch/2468136">See the website</a>
+            </div>
+        </div>
+        <div class="inspire">
+            <img src="images/week6inspiration2.png" alt="week6inspiration2">
+            <div class="textblock">
+            <p>The second one is very interesting. Users can use the mouse to generate a spectrum of different colors and sizes. The main thing that inspired me about this website is its excellent feedback to the user's mouse input. When the user tries to click, slide, or keep the mouse, the website will react differently. This kind of excellent design in details can greatly improve the sense of interaction between the user and the website.</p>
+            <a href="https://openprocessing.org/sketch/1358108">See the website</a>
+            </div>
+        </div>
+    </div>
+    <div>
+        <button onclick="window.location.href='index.html'" class="homepage-button">
+            Homepage
+        </button>
+    </div>
+    <div>
+        <button onclick="window.location.href='week6index.html'" class="back-button">
+            Back
+        </button>
+    </div>
+    <script>
+        let bgmStarted = false;
+        addEventListener("click", function(event){
+            const sound = new Audio("sound/gunsound.mp3");
+            sound.play();
+            // Added shooting sound effects 
+            if (bgmStarted == false) {
+                const bgm = new Audio("sound/bgm.mp3");
+                bgm.play();
+                bgm.volume = 0.4;
+                bgmStarted = true;
+            }
+            // Add background music (get idea from google)
+        document.body.style.cursor = "url('images/cursorFire.png'), auto";
+        setTimeout(() => {
+        document.body.style.cursor = "url('images/cursor.png'), auto";
+        }, 300)
+        })
+    </script>
+</body>
+</html>

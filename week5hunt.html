@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+</head>
+<body class="body">
+    <h1>Hunt'n'gather</h1>
+    <div class="container3">
+        <div class="hunt">
+            <img src="images/week5hunt1.jpg" alt="week5hunt1">
+            <p>Kusama is known as the Queen of Polka Dots, and I also tried to create with polka dots. I first selected a color range, then mixed it freely with watercolor paint, and made sure that the colors produced were within the color range. Then I randomly drew circles on the picture, and it didn't matter if the colors were mixed together, and thus created this dot painting.</p>
+        </div>
+        <div class="hunt">
+            <img src="images/week5hunt3.png" alt="week5hunt2">
+            <p>SLAVE TO THE ALGORITHM.I bought an ordinary six-sided die as a prop to determine my fate. First, I used the numbers 1-6 to represent 8:00-10:30 (half an hour and one point), and rolled the dice the night before to determine my wake-up time. Fortunately, I was able to sleep in until 10 o'clock. After that, I numbered my clothes, pants, and shoes, and used the dice to decide what to wear when going out. As a result, I was wearing all black (what a coincidence!). Of course, my lunch and dinner were also determined by the dice, and then I had McDonald's for lunch and pizza for dinner (high in calories!)</p>
+        </div>
+        <div class="week5hunt2">
+            <img src="images/week5hunt2.jpg" alt="week5hunt3">
+            <p>My portrait. I'm a MONSTER!</p>
+        </div>
+    </div>
+    <div>
+        <button onclick="window.location.href='index.html'" class="homepage-button">
+            Homepage
+        </button>
+    </div>
+    <div>
+        <button onclick="window.location.href='week5index.html'" class="back-button">
+            Back
+        </button>
+    </div>
+    <script>
+        let bgmStarted = false;
+        addEventListener("click", function(event){
+            const sound = new Audio("sound/gunsound.mp3");
+            sound.play();
+            // Added shooting sound effects 
+            if (bgmStarted == false) {
+                const bgm = new Audio("sound/bgm.mp3");
+                bgm.play();
+                bgm.volume = 0.4;
+                bgmStarted = true;
+            }
+            // Add background music (get idea from google)
+        document.body.style.cursor = "url('images/cursorFire.png'), auto";
+        setTimeout(() => {
+        document.body.style.cursor = "url('images/cursor.png'), auto";
+        }, 300)
+        })
+    </script>
+</body>
+</html>

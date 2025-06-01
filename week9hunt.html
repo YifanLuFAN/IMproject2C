@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+</head>
+<body class="body">
+    <h1>Hunt'n'gather</h1>
+    <div class="container3">
+        <div class="week9hunt">
+            <img src="images/week9hunt1.png" alt="week9hunt1">
+            <p>Remote Pulse (2019) is an interactive installation consisting of two identical pulse-sensing stations interconnected over the internet. One station is installed at ICA Central in Balboa Park in San Diego, and the other at CECUT Art Center in Tijuana. When a person places their hands on one station, the person on the other station automatically feels their pulse, as the plates vibrate in sync with the heartbeat of the remote person, and vice versa. The piece was originally presented as part of the 2019 Border Tuner installation across the US-Mexico border, with one station in Ciudad Juárez, Chihuahua and the other in El Paso, Texas.</p>
+        </div>
+        <div class="week9hunt">
+            <img src="images/week9hunt2.png" alt="week9hunt2">
+            <p>“Caressing the Circle” is a solo exhibition featuring five distinct works, three of them world premieres. The exhibition explores how technology mediates our interaction with the world and each other. Each piece engages with concepts of visibility, observation, and spatial dynamics, inviting viewers to reflect on their relationship with the environment and digital interfaces.</p>
+        </div>
+        <div class="week9hunt">
+            <img src="images/week9hunt3.png" alt="week9hunt3">
+            <p>"Translation Island" consists of ten audiovisual artworks—six of them world-premieres—that transform Lulu Island, a deserted island right across the water from downtown Abu Dhabi. Visitors are welcome to interact with the artworks by walking a two-kilometre-long lit path inside the island, alongside sand dunes, desert flora, beaches, and fresh water lakes. </p>
+        </div>
+    </div>
+    <div>
+        <button onclick="window.location.href='index.html'" class="homepage-button">
+            Homepage
+        </button>
+    </div>
+    <div>
+        <button onclick="window.location.href='week9index.html'" class="back-button">
+            Back
+        </button>
+    </div>
+    <script>
+        let bgmStarted = false;
+        addEventListener("click", function(event){
+            const sound = new Audio("sound/gunsound.mp3");
+            sound.play();
+            // Added shooting sound effects 
+            if (bgmStarted == false) {
+                const bgm = new Audio("sound/bgm.mp3");
+                bgm.play();
+                bgm.volume = 0.4;
+                bgmStarted = true;
+            }
+            // Add background music (get idea from google)
+        document.body.style.cursor = "url('images/cursorFire.png'), auto";
+        setTimeout(() => {
+        document.body.style.cursor = "url('images/cursor.png'), auto";
+        }, 300)
+        })
+    </script>
+</body>
+</html>

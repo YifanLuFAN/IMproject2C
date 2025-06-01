@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+</head>
+<body class="body">
+    <h1>Creative coding4</h1>
+    <div class="container3">
+        <div class="creative">
+            <img src="images/creative4.png" alt="week6creativecoding1">
+            <p>User input, I think this is the place that best reflects the interactive design of a website. We learned about mouse input and sound input this week.
+                <br>
+                Regarding mouse input, inspired by the website I saw on openprocessing, I also decided to make a website with different feedback for users clicking and moving the mouse.
+                <br>
+                The website I made will initially have squares that move randomly from the center to the surroundings. When the user clicks the mouse, all the squares will converge on the straight line formed by the center of the screen and the mouse click point. This process requires the user's mouse to stay for a while. If the user starts to move the mouse, the squares will diverge from the click point again, making a "meteor hammer" style pattern.
+                <br>
+                (Idea got from openprocessing)</p>
+            <a href="week6-1/index.html">See the website</a>
+        </div>
+    </div>
+    <div>
+        <button onclick="window.location.href='index.html'" class="homepage-button">
+            Homepage
+        </button>
+    </div>
+    <div>
+        <button onclick="window.location.href='week6index.html'" class="back-button">
+            Back
+        </button>
+    </div>
+    <script>
+        let bgmStarted = false;
+        addEventListener("click", function(event){
+            const sound = new Audio("sound/gunsound.mp3");
+            sound.play();
+            // Added shooting sound effects 
+            if (bgmStarted == false) {
+                const bgm = new Audio("sound/bgm.mp3");
+                bgm.play();
+                bgm.volume = 0.4;
+                bgmStarted = true;
+            }
+            // Add background music (get idea from google)
+        document.body.style.cursor = "url('images/cursorFire.png'), auto";
+        setTimeout(() => {
+        document.body.style.cursor = "url('images/cursor.png'), auto";
+        }, 300)
+        })
+    </script>
+</body>
+</html>

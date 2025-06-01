@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+</head>
+<body class="body">
+    <h1>Hunt'n'gather</h1>
+    <div class="container3">
+        <div class="hunt">
+            <img src="images/week4hunt1.jpg" alt="week4hunt1">
+            <p>This is an "infinitely extended" ladder. In fact, this effect is achieved by lights and mirrors. In a dim room, only the light on the ladder extending from the floor to the ceiling is on, and after the reflection of the mirror, the human eye will mistakenly think that the ladder extends below the floor.</p>
+        </div>
+        <div class="hunt">
+            <img src="images/week4hunt2.jpg" alt="week4hunt2">
+            <p>The red background is filled with black dots of different sizes and shapes. Each dot has a "tail" to form a tadpole shape. In the overall crowdedness of the picture, the distribution of the dots forms a clever balance, bringing visual impact without making people feel uncomfortable.</p>
+        </div>
+        <div class="hunt">
+            <img src="images/week4hunt3.jpg" alt="week4hunt3">
+            <p>The whole picture is composed of three colors: black, white and gray. The white background is dotted with black dots. Through the clever use of gray, the picture shows a three-dimensional effect in the plane, with a sense of layering. At the same time, the large number of black dots on the top of the picture form a beautiful shape (spiral), which makes the picture have a focus, and other areas are distributed in a fan shape.</p>
+        </div>
+    </div>
+    <div>
+        <button onclick="window.location.href='index.html'" class="homepage-button">
+            Homepage
+        </button>
+    </div>
+    <div>
+        <button onclick="window.location.href='week4index.html'" class="back-button">
+            Back
+        </button>
+    </div>
+    <script>
+        let bgmStarted = false;
+        addEventListener("click", function(event){
+            const sound = new Audio("sound/gunsound.mp3");
+            sound.play();
+            // Added shooting sound effects 
+            if (bgmStarted == false) {
+                const bgm = new Audio("sound/bgm.mp3");
+                bgm.play();
+                bgm.volume = 0.4;
+                bgmStarted = true;
+            }
+            // Add background music (get idea from google)
+        document.body.style.cursor = "url('images/cursorFire.png'), auto";
+        setTimeout(() => {
+        document.body.style.cursor = "url('images/cursor.png'), auto";
+        }, 300)
+        })
+    </script>
+</body>
+</html>

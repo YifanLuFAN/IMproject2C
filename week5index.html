@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+</head>
+<body class="index">
+    <div class="container1">
+        <h1>Week5</h1>
+        <div class="suspect1" onclick="startClick1()"><img src="images/mission.png" alt="mission1"><p class="indexText">Hunt'n'gather</p></div>
+        <div class="suspect2" onclick="startClick2()"><img src="images/mission.png" alt="mission2"><p class="indexText">Inspiration</p></div>
+        <div class="suspect3" onclick="startClick3()"><img src="images/mission.png" alt="mission3"><p class="indexText">In-class coding</p></div>
+        <div class="suspect4" onclick="startClick4()"><img src="images/mission.png" alt="mission4"><p class="indexText">Creative coding1</p></div>
+        <div class="suspect5" onclick="startClick5()"><img src="images/mission.png" alt="mission5"><p class="indexText">Creative coding2</p></div>
+        <!-- Added 5 suspects -->
+        <div id="startText">Mission Start!</div>
+        <!-- Add GOAL text after hitting the target -->
+    </div>
+    <div>
+        <button onclick="window.location.href='index.html'" class="homepage-button">
+            Homepage
+        </button>
+    </div>
+    <script>
+            let bgmStarted = false;
+        addEventListener("click", function(event){
+            const sound = new Audio("sound/gunsound.mp3");
+            sound.play();
+            // Added shooting sound effects 
+            if (bgmStarted == false) {
+                const bgm = new Audio("sound/bgm.mp3");
+                bgm.play();
+                bgm.volume = 0.4;
+                bgmStarted = true;
+            }
+
+        document.body.style.cursor = "url('images/cursorFire.png'), auto";
+        setTimeout(() => {
+        document.body.style.cursor = "url('images/cursor.png'), auto";
+        }, 300)
+        })
+        // Change mouse style after shooting (get idea from chatGPT)
+
+        function startClick1(){
+            document.getElementById("startText").style.display = "block";
+            setTimeout(() => {
+                window.location.href="week5hunt.html";
+                document.getElementById("startText").style.display = "none";
+            }, 3000)
+        }
+        // After shooting, a special sound effect is triggered and the page jumps (the first three targets) (get idea from chatGPT)
+        function startClick2(){
+            document.getElementById("startText").style.display = "block";
+            setTimeout(() => {
+                window.location.href="week5inspire.html";
+                document.getElementById("startText").style.display = "none";
+            }, 3000)
+        }
+        function startClick3(){
+            document.getElementById("startText").style.display = "block";
+            setTimeout(() => {
+                window.location.href="week5inclass.html";
+                document.getElementById("startText").style.display = "none";
+            }, 3000)
+        }
+        function startClick4(){
+            document.getElementById("startText").style.display = "block";
+            setTimeout(() => {
+                window.location.href="week5creative1.html";
+                document.getElementById("startText").style.display = "none";
+            }, 3000)
+        }
+        // After shooting, only special sound effects are triggered, and the page will not jump.
+        function startClick5(){
+            document.getElementById("startText").style.display = "block";
+            setTimeout(() => {
+                window.location.href="week5creative2.html";
+                document.getElementById("startText").style.display = "none";
+            }, 3000)
+        }
+    </script>
+</body>
+</html>
